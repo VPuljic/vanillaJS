@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Alice",
+    "age": 8,
+    "color": "yellow",
+    "id": 1,
+    "img": "../src/assets/img/catImg/Alice.jpg"
+  },
+
+  {
+    "name": "Amita",
+    "age": 2,
+    "color": "grey",
+    "id": 2,
+    "img": "../src/assets/img/catImg/Amita.jpg"
+  },
+
+  {
+    "name": "Anabella",
+    "age": 9,
+    "color": "beige",
+    "id": 3,
+    "img": "../src/assets/img/catImg/Anabella.jpg"
+  },
+
+  {
+    "name": "Ariel",
+    "age": 9,
+    "color": "yellow",
+    "id": 4,
+    "img": "../src/assets/img/catImg/Ariel.jpg"
+  },
+  {
+    "name": "Beck",
+    "age": 5,
+    "color": "grey",
+    "id": 5,
+    "img": "../src/assets/img/catImg/Beck.jpg"
+  }
+]
