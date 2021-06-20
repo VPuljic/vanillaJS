@@ -6,12 +6,13 @@ fetch("../public/data.json")
     let output = "<h2>Kittens</h2>";
     data.forEach((kitten) => {
       output += `
-      <ul>
-      <li>Name: ${kitten.name}</li>
-      <li>Age: ${kitten.age}</li>
-      <li>Color: ${kitten.color}</li>
-      <img src=${kitten.img} alt="nice cat" width=500 height=600>
-      </ul>
+      <div class="card">
+      <img src=${kitten.img} alt="nice cat" width=250 height=300>
+      <h4><b>Name: ${kitten.name}</b></h4>
+      <p>Age: ${kitten.age}</p>
+      <p>Color: ${kitten.color}</p>
+      <p><button>Take ME</button></p>
+      </div>
       `;
     });
     document.getElementById("output").innerHTML = output;
