@@ -36,5 +36,215 @@
     "color": "grey",
     "id": 5,
     "img": "../src/assets/img/catImg/Beck.jpg"
+  },
+  {
+    "name": "Bela",
+    "age": 11,
+    "color": "black",
+    "id": 6,
+    "img": "../src/assets/img/catImg/Bela.jpg"
+  },
+  {
+    "name": "Bliss",
+    "age": 9,
+    "color": "grey",
+    "id": 7,
+    "img": "../src/assets/img/catImg/Bliss.jpg"
+  },
+  {
+    "name": "Bonnie",
+    "age": 8,
+    "color": "black",
+    "id": 8,
+    "img": "../src/assets/img/catImg/Bonnie.jpg"
+  },
+  {
+    "name": "Cathy",
+    "age": 5,
+    "color": "grey",
+    "id": 9,
+    "img": "../src/assets/img/catImg/Cathy.jpg"
+  },
+  {
+    "name": "Cindy",
+    "age": 9,
+    "color": "yellow",
+    "id": 10,
+    "img": "../src/assets/img/catImg/Cindy.jpg"
+  },
+  {
+    "name": "Cora",
+    "age": 4,
+    "color": "white",
+    "id": 11,
+    "img": "../src/assets/img/catImg/Cora.jpg"
+  },
+  {
+    "name": "Dai",
+    "age": 13,
+    "color": "grey",
+    "id": 12,
+    "img": "../src/assets/img/catImg/Dai.jpg"
+  },
+  {
+    "name": "Dana",
+    "age": 10,
+    "color": "yellow",
+    "id": 13,
+    "img": "../src/assets/img/catImg/Dana.jpg"
+  },
+  {
+    "name": "Donna",
+    "age": 5,
+    "color": "grey",
+    "id": 14,
+    "img": "../src/assets/img/catImg/Donna.jpg"
+  },
+  {
+    "name": "Dora",
+    "age": 9,
+    "color": "grey",
+    "id": 15,
+    "img": "../src/assets/img/catImg/Dora.jpg"
+  },
+  {
+    "name": "Else",
+    "age": 3,
+    "color": "yellow",
+    "id": 16,
+    "img": "../src/assets/img/catImg/Else.jpg"
+  },
+  {
+    "name": "Ema",
+    "age": 7,
+    "color": "yellow",
+    "id": 17,
+    "img": "../src/assets/img/catImg/Ema.jpg"
+  },
+  {
+    "name": "Esme",
+    "age": 3,
+    "color": "grey",
+    "id": 18,
+    "img": "../src/assets/img/catImg/Esme.jpg"
+  },
+  {
+    "name": "Eva",
+    "age": 13,
+    "color": "black",
+    "id": 19,
+    "img": "../src/assets/img/catImg/Eva.jpg"
+  },
+  {
+    "name": "Femi",
+    "age": 5,
+    "color": "black",
+    "id": 20,
+    "img": "../src/assets/img/catImg/Femi.jpg"
+  },
+  {
+    "name": "Fiona",
+    "age": 9,
+    "color": "yellow",
+    "id": 21,
+    "img": "../src/assets/img/catImg/Fiona.jpg"
+  },
+  {
+    "name": "Fola",
+    "age": 15,
+    "color": "black",
+    "id": 22,
+    "img": "../src/assets/img/catImg/Fola.jpg"
+  },
+  {
+    "name": "Fruma",
+    "age": 9,
+    "color": "grey",
+    "id": 23,
+    "img": "../src/assets/img/catImg/Fruma.jpg"
+  },
+  {
+    "name": "Gail",
+    "age": 11,
+    "color": "brown",
+    "id": 24,
+    "img": "../src/assets/img/catImg/Gail.jpg"
+  },
+  {
+    "name": "Gala",
+    "age": 8,
+    "color": "grey",
+    "id": 25,
+    "img": "../src/assets/img/catImg/Gala.jpg"
+  },
+  {
+    "name": "Gilda",
+    "age": 2,
+    "color": "yellow",
+    "id": 26,
+    "img": "../src/assets/img/catImg/Gilda.jpg"
+  },
+  {
+    "name": "Gita",
+    "age": 1,
+    "color": "white",
+    "id": 27,
+    "img": "../src/assets/img/catImg/Gita.jpg"
+  },
+  {
+    "name": "Heidi",
+    "age": 5,
+    "color": "grey",
+    "id": 28,
+    "img": "../src/assets/img/catImg/Heidi.jpg"
+  },
+  {
+    "name": "Hera",
+    "age": 6,
+    "color": "orange",
+    "id": 29,
+    "img": "../src/assets/img/catImg/Hera.jpg"
+  },
+  {
+    "name": "Hilda",
+    "age": 9,
+    "color": "grey",
+    "id": 30,
+    "img": "../src/assets/img/catImg/Hilda.jpg"
+  },
+  {
+    "name": "Jody",
+    "age": 3,
+    "color": "orange",
+    "id": 31,
+    "img": "../src/assets/img/catImg/Jody.jpg"
+  },
+  {
+    "name": "Joy",
+    "age": 10,
+    "color": "grey",
+    "id": 32,
+    "img": "../src/assets/img/catImg/Joy.jpg"
+  },
+  {
+    "name": "June",
+    "age": 3,
+    "color": "yellow",
+    "id": 33,
+    "img": "../src/assets/img/catImg/June.jpg"
+  },
+  {
+    "name": "Kaya",
+    "age": 2,
+    "color": "grey",
+    "id": 34,
+    "img": "../src/assets/img/catImg/Kaya.jpg"
+  },
+  {
+    "name": "Kira",
+    "age": 9,
+    "color": "yellow",
+    "id": 35,
+    "img": "../src/assets/img/catImg/Kira.jpg"
   }
 ]
