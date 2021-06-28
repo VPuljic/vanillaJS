@@ -54,11 +54,13 @@ function loadList(newArray) {
 }
 /// Spliting array of pulled data to display page by page
 function pageArraySplit(array) {
-  console.log(pagination.startSlice);
   return array.slice(pagination.startSlice, pagination.endSlice);
 }
 /// Creating new splited array
 function loadPaging(array) {
+  array.sort(function (a, b) {
+    return a.age - b.age;
+  });
   const newArray = pageArraySplit(array);
   loadList(newArray);
 }
@@ -68,3 +70,7 @@ showMore.addEventListener("click", () => {
   pagination.startSlice = pagination.endSlice;
   pagination.endSlice += PER_PAGE;
 });
+
+// Search bar
+
+let filterInput = document.getElementById("filterInput");
