@@ -18,9 +18,14 @@
         </ul>
       </div>
     </div>
-
-    <form>
-      <input type="text" id="filterInput" placeholder="Search..." />
+    <p>Sort kittens by age or name</p>
+    <input type="radio" id="byAge" value="age" name="radio" checked="checked">Age</input>
+    <input type="radio" id="byName" value="name" name="radio">Name</input>
+    <p>Ascending/Descending</p>
+    <input type="radio" id="ascending" value="ascending" name="sort" checked="checked">Ascending</input>
+    <input type="radio" id="descending" value="descending" name="sort">Descending</input>
+      <form>
+      <input type="text" id="filterInput" placeholder="Search kitten by name..." />
     </form>
     <br />
     <div id="list"></div>

@@ -19,6 +19,19 @@ const pagination = {
   startSlice: 0,
   endSlice: 10,
 };
+let selectedValue = "";
+let sortValue = "";
+/// Radio button name or age
+function checkedValue() {
+  selectedValue = document.querySelector("input[name=radio]:checked");
+  return selectedValue.value;
+}
+/// Radio button ascending/descending
+function sortArray() {
+  sortValue = document.querySelector("input[name=sort]:checked");
+  return sortValue.value;
+}
+
 /// Pulling data from local file
 fetch("../public/data.json")
   .then((response) => response.json())
@@ -56,11 +69,29 @@ function loadList(newArray) {
 function pageArraySplit(array) {
   return array.slice(pagination.startSlice, pagination.endSlice);
 }
-/// Creating new splited array
+/// Creating new splited and sorted array
 function loadPaging(array) {
-  array.sort(function (a, b) {
-    return a.age - b.age;
-  });
+  let ageName = checkedValue();
+  let ascendingDescending = sortArray();
+  ascendingDescending === "ascending"
+    ? array.sort(function (a, b) {
+        if (a[ageName] < b[ageName]) {
+          return -1;
+        }
+        if (a[ageName] > b[ageName]) {
+          return 1;
+        }
+        return 0;
+      })
+    : array.sort(function (a, b) {
+        if (a[ageName] < b[ageName]) {
+          return 1;
+        }
+        if (a[ageName] > b[ageName]) {
+          return -1;
+        }
+        return 0;
+      });
   const newArray = pageArraySplit(array);
   loadList(newArray);
 }
