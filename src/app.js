@@ -19,8 +19,11 @@ const pagination = {
   startSlice: 0,
   endSlice: 10,
 };
+let newArray = [];
 let selectedValue = "";
 let sortValue = "";
+let checkboxArray = [];
+let filtertArray = [];
 /// Radio button name or age
 function checkedValue() {
   selectedValue = document.querySelector("input[name=radio]:checked");
@@ -92,16 +95,25 @@ function loadPaging(array) {
         }
         return 0;
       });
-  const newArray = pageArraySplit(array);
+  if (checkboxArray.length > 0) {
+    filtertArray = array.filter((element) => element.color === "grey");
+    newArray = pageArraySplit(filtertArray);
+  } else newArray = pageArraySplit(array);
   loadList(newArray);
+  console.log("filter", filtertArray);
+  console.log("array", array);
+}
+/// Filter array of kittens
+function loadFilter() {
+  let checkboxes = document.querySelectorAll("input[type=checkbox]:checked");
+  checkboxes.forEach((checkbox) => {
+    checkboxArray.push(checkbox.value);
+  });
 }
 /// Event listener on button to display kittens
 showMore.addEventListener("click", () => {
+  loadFilter();
   loadPaging(array);
   pagination.startSlice = pagination.endSlice;
   pagination.endSlice += PER_PAGE;
 });
-
-// Search bar
-
-let filterInput = document.getElementById("filterInput");

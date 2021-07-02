@@ -18,12 +18,21 @@
         </ul>
       </div>
     </div>
+    <div class="radioButtons">
     <p>Sort kittens by age or name</p>
     <input type="radio" id="byAge" value="age" name="radio" checked="checked">Age</input>
     <input type="radio" id="byName" value="name" name="radio">Name</input>
     <p>Ascending/Descending</p>
     <input type="radio" id="ascending" value="ascending" name="sort" checked="checked">Ascending</input>
     <input type="radio" id="descending" value="descending" name="sort">Descending</input>
+    </div>
+    <div class="filter">
+<tr>  
+<td> Kitten under 6 m: <input type="checkbox" id="check1" name="pl" value="6"> </td>  
+<td> Kitten under 12 m: <input type="checkbox" id="check2" name="pl" value="12"> </td>   
+<td> Kitten that is black: <input type="checkbox" id="check3" name="pl" value="black"> </td>   
+</tr> 
+</div>
       <form>
       <input type="text" id="filterInput" placeholder="Search kitten by name..." />
     </form>
