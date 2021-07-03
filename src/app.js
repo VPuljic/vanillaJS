@@ -145,9 +145,18 @@ function loadPaging(array) {
     }
   } else newArray = pageArraySplit(array);
   loadList(newArray);
-  console.log("filter", filtertArray);
-  console.log("array", array);
-  console.log("checkbox", checkboxArray);
+}
+/// Filtering displayed kittens by search bar
+function searchKitten() {
+  let input = document.getElementById("searchbar").value;
+  input = input.toLowerCase();
+  let dispalyedKittens = [];
+  for (var i = 0; i < newArray.length; i++) {
+    if (!newArray[i].name.toLowerCase().includes(input)) {
+      document.getElementById("list").innerHTML = "";
+    } else dispalyedKittens.push(newArray[i]);
+  }
+  loadList(dispalyedKittens);
 }
 /// Filter array of kittens
 function loadFilter() {

@@ -33,9 +33,7 @@
 <td> Kitten that is black: <input type="checkbox" id="check3" name="pl" value="black"> </td>   
 </tr> 
 </div>
-      <form>
-      <input type="text" id="filterInput" placeholder="Search kitten by name..." />
-    </form>
+   <input id="searchbar" onkeyup="searchKitten()" type="text" name="search" placeholder="Search kitten..." /> 
     <br />
     <div id="list"></div>
     <button type="button" class="button" id="showMore">Show More</button>
