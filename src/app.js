@@ -14,10 +14,10 @@ for (let i = 0; i < marqueeElementsDisplayed; i++) {
 // List of kitten "cards"
 const showMore = document.getElementById("showMore");
 const array = [];
-const PER_PAGE = 10;
+const PER_PAGE = 20;
 const pagination = {
   startSlice: 0,
-  endSlice: 10,
+  endSlice: 20,
 };
 let newArray = [];
 let selectedValue = "";
@@ -95,13 +95,59 @@ function loadPaging(array) {
         }
         return 0;
       });
-  if (checkboxArray.length > 0) {
-    filtertArray = array.filter((element) => element.color === "grey");
-    newArray = pageArraySplit(filtertArray);
+  /// Filtering by checkbox
+  if (checkboxArray.length === 1) {
+    switch (checkboxArray[0]) {
+      case "black":
+        filtertArray = array.filter((element) => element.color === "black");
+        newArray = pageArraySplit(filtertArray);
+        break;
+      case "12":
+        filtertArray = array.filter((element) => element.age < "12");
+        newArray = pageArraySplit(filtertArray);
+        break;
+      case "6":
+        filtertArray = array.filter((element) => element.age < "6");
+        newArray = pageArraySplit(filtertArray);
+        break;
+      default:
+        console.log("Error");
+    }
+  } else if (checkboxArray.length === 2) {
+    switch (checkboxArray[0] + checkboxArray[1]) {
+      case "12black":
+        filtertArray = array.filter(
+          (element) => element.color === "black" && element.age < "12"
+        );
+        newArray = pageArraySplit(filtertArray);
+        break;
+      case "6black":
+        filtertArray = array.filter(
+          (element) => element.color === "black" && element.age < "6"
+        );
+        newArray = pageArraySplit(filtertArray);
+        break;
+      case "612":
+        filtertArray = array.filter((element) => element.age < "12");
+        newArray = pageArraySplit(filtertArray);
+        break;
+      default:
+        console.log("Error");
+    }
+  } else if (checkboxArray.length === 3) {
+    switch (checkboxArray[0] + checkboxArray[1] + checkboxArray[2]) {
+      case "612black":
+        filtertArray = array.filter(
+          (element) => element.color === "black" && element.age < "12"
+        );
+        newArray = pageArraySplit(filtertArray);
+        break;
+    }
   } else newArray = pageArraySplit(array);
   loadList(newArray);
   console.log("filter", filtertArray);
   console.log("array", array);
+  console.log("checkbox", checkboxArray);
 }
 /// Filter array of kittens
 function loadFilter() {
