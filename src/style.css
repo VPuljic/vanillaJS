@@ -23,7 +23,7 @@
 :root {
   --marquee-width: 80vw;
   --marquee-height: 20vh;
-  --marquee-elements-displayed: 5;
+  --marquee-elements-displayed: 4;
   --marquee-element-width: calc(
     var(--marquee-width) / var(--marquee-elements-displayed)
   );

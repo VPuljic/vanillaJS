@@ -34,7 +34,6 @@ function sortArray() {
   sortValue = document.querySelector("input[name=sort]:checked");
   return sortValue.value;
 }
-
 /// Pulling data from local file
 fetch("../public/data.json")
   .then((response) => response.json())
@@ -46,6 +45,14 @@ fetch("../public/data.json")
   .catch((error) => {
     console.log(error);
   });
+/// Function that "adopts" kitten
+function take(id) {
+  if (confirm(`Do you want to adopt`) == true) {
+    document.getElementById("list").innerHTML = "";
+    let notTaken = newArray.filter((element) => element.id !== id);
+    loadList(notTaken);
+  }
+}
 /// Structure of kitten "card"
 function displayKittens(item) {
   const template = document.createElement("template");
@@ -55,7 +62,7 @@ function displayKittens(item) {
       <h4><b>Name: ${item.name}</b></h4>
       <p>Age: ${item.age}</p>
       <p>Color: ${item.color}</p>
-      <p><button>Take me</button></p>
+      <p><button onclick="take(${item.id})">Take me</button></p>
       </div>
       `;
   template.innerHTML = html;
@@ -154,7 +161,10 @@ function searchKitten() {
   for (var i = 0; i < newArray.length; i++) {
     if (!newArray[i].name.toLowerCase().includes(input)) {
       document.getElementById("list").innerHTML = "";
-    } else dispalyedKittens.push(newArray[i]);
+    } else {
+      document.getElementById("list").innerHTML = "";
+      dispalyedKittens.push(newArray[i]);
+    }
   }
   loadList(dispalyedKittens);
 }
