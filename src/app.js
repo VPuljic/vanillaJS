@@ -20,6 +20,27 @@ function changeDirection() {
   root.style.setProperty("--marquee-scroling-first", marqueeScroleSecond);
   root.style.setProperty("--marquee-scroling-second", marqueeScroleFirst);
 }
+const modal = document.querySelector(".modal");
+const previews = document.querySelectorAll(".marquee img");
+const original = document.querySelector(".full-img");
+const caption = document.querySelector(".caption");
+const close = document.querySelectorAll(".close");
+previews.forEach((preview) => {
+  preview.addEventListener("click", () => {
+    modal.classList.add("open");
+    original.classList.add("open");
+    const originalSrc = preview.getAttribute("data-original");
+    original.src = originalSrc;
+    const altText = preview.alt;
+    caption.textContent = altText;
+  });
+});
+close.forEach((e) => {
+  e.addEventListener("click", () => {
+    modal.classList.remove("open");
+    original.classList.remove("open");
+  });
+});
 
 // List of kitten "cards"
 const showMore = document.getElementById("showMore");
