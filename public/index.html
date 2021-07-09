@@ -9,40 +9,97 @@
   </head>
   <body>
     <h1 class="title">Take me home</h1>
-    <button id="navLeft" class="slider-left" onclick="changeDirection()"><i class="fas fa-arrow-left fa-3x"></i></button>
+    <button id="navLeft" class="slider-left" onclick="changeDirection()">
+      <i class="fas fa-arrow-left fa-3x"></i>
+    </button>
     <div class="carousel">
       <div class="marquee">
-        <ul class="marquee-content">
-          <li class="marqueeImg"><img src="../src/assets/img/caruselImg/Amita.jpg" alt="Amita 2 months old grey kitten" data-original="../src/assets/img/caruselImg/Amita.jpg"></li>
-          <li class="marqueeImg"><img src="../src/assets/img/caruselImg/Beck.jpg" alt="Beck 5 months old grey kitten" data-original="../src/assets/img/caruselImg/Beck.jpg"></li>
-          <li class="marqueeImg"><img src="../src/assets/img/caruselImg/Cora.jpg" alt="Cora 4 months old white kitten" data-original="../src/assets/img/caruselImg/Cora.jpg"></li>
-          <li class="marqueeImg"><img src="../src/assets/img/caruselImg/Esme.jpg" alt="Esme 3 months old grey kitten" data-original="../src/assets/img/caruselImg/Esme.jpg"></li>
+        <ul class="marquee-content" id="marquee">
+          <li class="marqueeImg">
+            <img
+              src="../src/assets/img/caruselImg/Amita.jpg"
+              alt="Amita 2 months old grey kitten"
+              data-original="../src/assets/img/caruselImg/Amita.jpg"
+            />
+            <h4 class="carouselName">Amita</h4>
+          </li>
+          <li class="marqueeImg">
+            <img
+              src="../src/assets/img/caruselImg/Beck.jpg"
+              alt="Beck 5 months old grey kitten"
+              data-original="../src/assets/img/caruselImg/Beck.jpg"
+            />
+            <h4 class="carouselName">Beck</h4>
+          </li>
+          <li class="marqueeImg">
+            <img
+              src="../src/assets/img/caruselImg/Cora.jpg"
+              alt="Cora 4 months old white kitten"
+              data-original="../src/assets/img/caruselImg/Cora.jpg"
+            />
+            <h4 class="carouselName">Cora</h4>
+          </li>
+          <li class="marqueeImg">
+            <img
+              src="../src/assets/img/caruselImg/Esme.jpg"
+              alt="Esme 3 months old grey kitten"
+              data-original="../src/assets/img/caruselImg/Esme.jpg"
+            />
+            <h4 class="carouselName">Esme</h4>
+          </li>
         </ul>
       </div>
     </div>
-    <button id="navRight" class="slider-right" onclick="changeDirection()"><i class="fas fa-arrow-right fa-3x"></i></button>
-<div class="modal">
-  <span class="close">&times;</span>
-  <img src="" class="full-img" >
-  <p class="caption"></p>
-</div>
-    <div class="radioButtons">
-    <p>Sort kittens by age or name</p>
-    <input type="radio" id="byAge" value="age" name="radio" checked="checked">Age</input>
-    <input type="radio" id="byName" value="name" name="radio">Name</input>
-    <p>Ascending/Descending</p>
-    <input type="radio" id="ascending" value="ascending" name="sort" checked="checked">Ascending</input>
-    <input type="radio" id="descending" value="descending" name="sort">Descending</input>
+    <button id="navRight" class="slider-right" onclick="changeDirection()">
+      <i class="fas fa-arrow-right fa-3x"></i>
+    </button>
+    <div class="modal">
+      <span class="close">&times;</span>
+      <img src="" class="full-img" />
+      <p class="caption"></p>
     </div>
-    <div class="filter">
-<tr>  
-<td> Kitten under 6 m: <input type="checkbox" id="check1" name="pl" value="6"> </td>  
-<td> Kitten under 12 m: <input type="checkbox" id="check2" name="pl" value="12"> </td>   
-<td> Kitten that is black: <input type="checkbox" id="check3" name="pl" value="black"> </td>   
-</tr> 
-</div>
-   <input id="searchbar" onkeyup="searchKitten()" type="text" name="search" placeholder="Search kitten..." /> 
-    <br />
+    <div>
+      <h2>Sort all kittens by age or name</h2>
+      <h2>Sort kittens by name or age</h2>
+      <div class="radioButtons">
+        <input
+          type="radio"
+          id="byAge"
+          value="age"
+          name="radio"
+          checked="checked"
+        />
+        <label for="byAge">Age</label>
+        <input type="radio" id="byName" value="name" name="radio" />
+        <label for="byName">Name</label>
+        <input
+          type="radio"
+          id="ascending"
+          value="ascending"
+          name="sort"
+          checked="checked"
+        />
+        <label for="ascending">Ascending</label>
+        <input type="radio" id="descending" value="descending" name="sort" />
+        <label for="descending">Descending</label>
+      </div>
+      <h2>Find perfect kitten for you...</h2>
+      <div class="radioButtons">
+        <input type="checkbox" name="cb" id="cb1" value="6" />
+        <label for="cb1">Kitten under 6 m</label>
+        <input type="checkbox" name="cb" id="cb2" value="12" />
+        <label for="cb2">Kitten under 12 m</label>
+        <input type="checkbox" name="cb" id="cb3" value="black" />
+        <label for="cb3">Kitten that is black</label>
+      </div>
+    </div>
+    <input
+      id="searchbar"
+      onkeyup="searchKitten()"
+      type="text"
+      name="search"
+      placeholder="Search kitten by name..."
+    />
     <div id="list"></div>
     <button type="button" class="button" id="showMore">Show More</button>
     <script src="../src/app.js"></script>

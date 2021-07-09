@@ -11,6 +11,10 @@ for (let i = 0; i < marqueeElementsDisplayed; i++) {
   marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
 function changeDirection() {
+  let el = document.getElementById("marquee");
+  el.style.animation = "none";
+  el.offsetHeight;
+  el.style.animation = null;
   let marqueeScroleFirst = getComputedStyle(root).getPropertyValue(
     "--marquee-scroling-first"
   );
@@ -20,6 +24,7 @@ function changeDirection() {
   root.style.setProperty("--marquee-scroling-first", marqueeScroleSecond);
   root.style.setProperty("--marquee-scroling-second", marqueeScroleFirst);
 }
+/// Modal image in carousel
 const modal = document.querySelector(".modal");
 const previews = document.querySelectorAll(".marquee img");
 const original = document.querySelector(".full-img");
@@ -184,7 +189,7 @@ function loadPaging(array) {
   } else newArray = pageArraySplit(array);
   loadList(newArray);
 }
-/// Filtering displayed kittens by search bar
+/// Filtering displayed kittens with search bar
 function searchKitten() {
   let input = document.getElementById("searchbar").value;
   input = input.toLowerCase();
@@ -212,4 +217,8 @@ showMore.addEventListener("click", () => {
   loadPaging(array);
   pagination.startSlice = pagination.endSlice;
   pagination.endSlice += PER_PAGE;
+  let button = document.getElementById("showMore");
+  if (newArray.length < 20) {
+    button.classList.add("open");
+  } else button.classList.remove("open");
 });
